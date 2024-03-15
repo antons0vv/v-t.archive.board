@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Время тень</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <script src="javascript/jquery-3.7.1.js" charset="UTF-8"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="javascript/two.min.js" charset="UTF-8"></script>
+    <script src="javascript/anim-1.js" charset="UTF-8"></script>
+    <script src="javascript/main.js" charset="UTF-8"></script>
+</head>
+
+<body>
+    <div class="top_bar">
+
+        <button class="text" id="vtBtn">время тень</button>
+        <button class="text" id="plusBtn">+</button>
+        <button class="text" id="aboutBtn">о проекте</button>
+
+
+    </div>
+    <div class="ovals">
+        <svg id="oval_1" width="125" height="32" viewBox="0 0 125 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="path_1" d="M62.5, 16 m-61.5, 0 a 61.5, 15 0 1,0 123,0 a 61.5, 15 0 1,0 -123,0 " stroke="black">
+        </svg>
+        <svg id="oval_2" width="125" height="32" viewBox="0 0 125 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="path_2" d="M62.5, 16 m-61.5, 0 a 61.5, 15 0 1,0 123,0 a 61.5, 15 0 1,0 -123,0 " stroke="black">
+            </path>
+        </svg>
+    </div>
+    <div class="scans">
+        <img id="post_easter" class="scan" src="img/открытка-15 1.png" ismap="ismap" usemap="#metroid" alt="">
+        <img id="peace" class="scan" src="img/билетик и картчока.png" alt="">
+        <img id="icon-1" class="scan" src="img/икона-4 2.png" alt="">
+        <img id="cap" class="scan" src="img/крыжечка 1.png" alt="">
+        <img id="card-1" class="scan" src="img/мал-карта-1 2.png" alt="">
+        <img id="sketch-1" class="scan" src="img/блокнок 2.png" alt="">
+        <img id="sticker-1" class="scan" src="img/найклейка-2 1.png" alt="">
+        <img id="sketch-2" class="scan" src="img/notebook 1.png" alt="">
+        <img id="post_porte" class="scan" src="img/открытка-7 1.png" alt="">
+        <img id="book_shishkan" class="scan" src="img/book-shish 1.png" alt="">
+        <img id="braclet-1" class="scan" src="img/фенечка-2 1.png" alt="">
+        <img id="post_girl" class="scan" src="img/открытка-4 1.png" alt="">
+        <img id="money" class="scan" src="img/деньги.png" alt="">
+        <img id="cat" class="scan" src="img/кот-1-1.png" alt="">
+        <img id="polaroid" class="scan" src="img/фото 1.png" alt="">
+        <img id="basquiat" class="scan" src="img/баския-1.png" alt="">
+        <img id="card-2" class="scan" src="img/мал-карта-0 1.png" alt="">
+        <img id="baby" class="scan" src="img/бэбик 1.png" alt="">
+        <img id="vgik" class="scan" src="img/вгик 1.png" alt="">
+        <img id="georgia-1" class="scan" src="img/закладка.png" alt="">
+        <img id="tree" class="scan" src="img/дерево.png" alt="">
+        <img id="ticket" class="scan" src="img/билетик старый2 1.png" alt="">
+        <img id="braclet-2" class="scan" src="img/браслетик 1.png" alt="">
+        <img id="icon-2" class="scan" src="img/икона-1 1.png" alt="">
+        <img id="post_cat" class="scan" src="img/открытка-18 1.png" alt="">
+        <img id="sticker-2" class="scan" src="img/найклейка 1.png" alt="">
+        <img id="scrap" class="scan" src="img/скрепка 1.png" alt="">
+        <img id="sketch-3" class="scan" src="img/блокнок 1.png" alt="">
+        <img id="tram" class="scan" src="img/IMG_4927 1.png" alt="">
+        <img id="card-3" class="scan" src="img/мал-карта-6 1.png" alt="">
+        <img id="moomin" class="scan" src="img/карточка.png" alt="">
+        <img id="post_catstar" class="scan" src="img/грибы.png" alt="">
+        <img id="nice-1" class="scan" src="img/ницца 2.png" alt="">
+        <img id="card-4" class="scan" src="img/мал-карта-1 1.png" alt="">
+        <img id="kino" class="scan" src="img/кинцо 1.png" alt="">
+        <img id="ipod" class="scan" src="img/плеер 1.png" alt="">
+        <img id="tel-aviv" class="scan" src="img/tel-aviv-2 1.png" alt="">
+        <img id="post_sheep" class="scan" src="img/открытка-8 1.png" alt="">
+        <img id="sochi" class="scan" src="img/блокнот.png" alt="">
+        <img id="msk_t-1" class="scan" src="img/т карта москва 3.png" alt="">
+        <img id="envelope" class="scan" src="img/конверт 1.png" alt="">
+        <img id="ticket_air-1" class="scan" src="img/т карты.png" alt="">
+        <img id="georgia-2" class="scan" src="img/грузия 2.png" alt="">
+        <img id="matches" class="scan" src="img/спички.png" alt="">
+        <img id="nice-2" class="scan" src="img/ницца.png" alt="">
+        <img id="card-5" class="scan" src="img/мал-карта-6 2.png" alt="">
+        <img id="msk_t-2" class="scan" src="img/т карта москва 2 1.png" alt="">
+        <img id="post_mushrooms" class="scan" src="img/грибы-1.png" alt="">
+        <img id="ticket_air-2" class="scan" src="img/билетик-3 1.png" alt="">
+        <img id="istanbul" class="scan" src="img/стамбул 1.png" alt="">
+        <img id="paper_summer" class="scan" src="img/бумажечка.png" alt="">
+        <img id="braclet-3" class="scan" src="img/фенечка-1 1.png" alt="">
+        <img id="icon-3" class="scan" src="img/икона-8 2.png" alt="">
+        <img id="book-1" class="scan" src="img/грузия 1.png" alt="">
+        <img id="post_green" class="scan" src="img/открытка-6 1.png" alt="">
+    </div>
+
+    <div class="popup About popupOff">
+        <button class="text close" type="button">×</button>
+        <p class="text textAbout">v-t.acrhive/board&nbsp;&mdash; это сайт-архив воспоминаний. На&nbsp;нём можно найти
+            объекты
+            из&nbsp;прошлого,
+            загруженные другими пользователями и&nbsp;дополненные их&nbsp;звуками и&nbsp;историями. Также каждый
+            посетитель может
+            загрузить свой объект-воспоминание для изучения и&nbsp;погружения в&nbsp;прошлое.</p>
+    </div>
+    <div class="popup desScan popupOff">
+        <button class="text close" type="button">×</button>
+        <div class="imgScanPopup"><img class="scanPopup" src="img/грузия 2.png" alt=""></div>
+        <div class="textPopup">
+            <p class="text scanName scantextPopup">Проездной билет</p>
+            <p class="text scanDate scantextPopup">10 июля 2008/ Москва. Россия</p>
+            <button class="text scanListen scantextPopup">>Послушать воспоминание</button>
+            <button class="text scanPrint scantextPopup">>Распечатать открытку</button>
+        </div>
+    </div>
+
+    <div class="popup addScan popupOff">
+        <button class="text close" type="button">×</button>
+        <div class="imgScanPopup"><img class="scanPopup" src="img/грузия 2.png" alt=""></div>
+        <div class="textPopup">
+            <p class="text scanName scantextPopup">Проездной билет</p>
+            <p class="text scanDate scantextPopup">10 июля 2008/ Москва. Россия</p>
+            <button class="text scanListen scantextPopup">>Послушать воспоминание</button>
+            <button class="text scanPrint scantextPopup">>Распечатать открытку</button>
+        </div>
+    </div>
+</body>
+
+</html>

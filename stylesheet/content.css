@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "Wremena";
+    src: url(../fonts/WremenaRegular.woff) format('woff');
+    font-weight: normal;
+}
+
+body {
+    width: 5303px;
+    height: 3354px;
+
+    cursor: help;
+
+    background-color: #e8e7e7;
+}
+
+.text {
+    font-family: "Wremena";
+    line-height: 110%;
+    font-variant-numeric: lining-nums proportional-nums;
+
+    font-size: 20px;
+    line-height: 110%;
+
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.top_bar {
+    width: calc(100% - 60px);
+
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 20px 30px 30px;
+    padding-bottom: 8px;
+
+    border-bottom: 2px solid black;
+
+    z-index: 100;
+}
+
+.ovals {
+    width: calc(100% - 27px);
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 16px 16px 30px;
+    padding-bottom: 8px;
+
+}
+
+#oval_1 {
+    rotate: -2deg;
+}
+
+#oval_2 {
+    rotate: 2deg;
+}
+
+.path_1,
+.path_2 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.popup {
+    position: fixed;
+    background-color: #D9D9D9 0.9;
+
+    backdrop-filter: blur(15px);
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: none;
+    border-radius: 2px;
+    padding: 20px 25px 25px 25px;
+
+    text-align: left;
+
+    z-index: 1000;
+}
+
+.close {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    position: absolute;
+    font-size: 30px;
+
+    top: 8px;
+    left: calc(100% - 32px);
+}
+
+.popupOff {
+    display: none;
+}
+
+.popupOn {
+    display: block;
+}
+
+.About {
+    max-width: 480px;
+}
+
+.desScan {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    height: 60%;
+    min-width: 860px;
+}
+
+.scanPopup {
+    height: 100%;
+}
+
+.textAbout,
+.scantextPopup {
+    font-size: 25px;
+}
+
+.imgScanPopup {
+    height: 100%;
+    padding: 5px 5px 5px 15px;
+}
+
+.scanListen,
+.scanPrint {
+    margin-top: 25px;
+}
