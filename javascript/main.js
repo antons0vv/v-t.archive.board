@@ -1,12 +1,16 @@
-
+import scanData from './scandata.js'
 $(document).ready(function () {
+
+    $(window).scrollTop($(window).height() / 2);
+    $(window).scrollLeft($(window).width() / 2);
+
     $(".scan").each(function () {
         let rAngle = (Math.random() * 20) - 10;
-        $(".scan").css("rotate", rAngle + "deg");
+        $(this).css("rotate", rAngle + "deg");
     });
 
     $(".scan").each(function () {
-        let rAnglePopup = (Math.random() * 10) - 5;
+        let rAnglePopup = (Math.random() * 20) - 10;
         $(".scanPopup").css("rotate", rAnglePopup + "deg");
     });
 
@@ -15,52 +19,76 @@ $(document).ready(function () {
     $(".scan").draggable({ stack: ".scan" });
 
     $("#aboutBtn").click(function () {
-        $(".About").fadeIn(90)
         $(".About").removeClass("popupOff").addClass("popupOn");
     });
 
     $(".close").click(function () {
-        $(".popup").fadeOut(90)
         $(".popup").removeClass("popupOn").addClass("popupOff");
     });
 
 
-    // Description scan popup
+    //Ovals animation
 
+    $("#aboutBtn").mouseover(function () {
+        $(".path_2").css("opacity", "1").animate({
+            'stroke-dashoffset': 0
+        }, 400, 'easeInOutCubic');
 
-    let textPopup
-    const post_easter = {
-        name: "Пасхальная открытка",
-        date: "20 июля 2020/ Санкт-Петербург",
-        img: 1,
-        sound: "On",
-    }
-
-
-    $(".scan").click(function () {
-
-
-        textPopup = $(this).attr('id');
-
-        console.log({ name } = post_easter)
-
-        $(".scanName").html(textPopup[name]);
-        $(".scanDate").html(textPopup.date);
-
-        $(".desScan").fadeIn(90);
-        $(".desScan").removeClass("popupOff").addClass("popupOn");
+    }).mouseleave(function () {
+        $(".path_2").css({
+            "stroke-dashoffset": "340", "opacity": "0"
+        });
     });
 
-    //Oval animation
+    $("#vtBtn").mouseover(function () {
+        $(".path_1").css("opacity", "1").animate({
+            'stroke-dashoffset': 0
+        }, 400, 'easeInOutCubic');
 
-    $("#aboutBtn").hover(function () {
-        $(".path")
-    })
-    // Load scan popup
+    }).mouseleave(function () {
+        $(".path_1").css({
+            "stroke-dashoffset": "340", "opacity": "0"
+        });
+    });
 
-    $(".plusBtn").click(function () {
+    //Pattern animation variables
 
-        $(".addScan").fadeIn(90);
+    let animationRunning = false;
+
+    $("#post_easter").mouseover(function () {
+        animationRunning = true;
+        console.log(1)
+
+    }).mouseleave(function () {
+        animationRunning = false;
+        console.log(0)
+    });
+
+    // Description Popup
+
+    $(".scan").click(function () {
+        let imageId = $(this).attr('id');
+        let imageData = scanData[imageId];
+        $(".scanName").html(imageData.name);
+        $(".scanDate").html(imageData.date);
+        $(".scanDesc").html(imageData.description);
+        $(".scanPopup").attr("src", imageData.src);
+
+        if ($("#" + imageId).width() < $("#" + imageId).height()) {
+            $(".scanPopup").css({ "rotate": "0" + "deg", "object-fit": "contain", "width": "100%", "height": "100%" });
+        } else if (imageId == "basquiat") {
+            $(".scanPopup").css({ "rotate": "0" + "deg", "object-fit": "contain", "width": "90%", "height": "90%" });
+        }
+        else if (imageId == "sticker2") {
+            $(".scanPopup").css({ "rotate": "0" + "deg", "object-fit": "contain", "width": "90%", "height": "90%" });
+        }
+        else if (imageId == "nice2") {
+            $(".scanPopup").css({ "rotate": "0" + "deg", "object-fit": "contain", "width": "100%", "height": "100%" });
+        }
+        else {
+            $(".scanPopup").css({ "rotate": "-90" + "deg", "object-fit": "contain", "width": "122%", "height": "122%" });
+        };
+
         $(".desScan").removeClass("popupOff").addClass("popupOn");
 
     });
