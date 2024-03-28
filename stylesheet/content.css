@@ -7,7 +7,7 @@
 @media (min-width:316px) {
     body {
 
-        width: 2 651px;
+        width: 2651px;
         height: 1677px;
     }
 
@@ -15,6 +15,20 @@
         font-size: 16px;
     }
 
+    /* .scans {
+        transform: scale(0.6);
+    } */
+
+    .desScan {
+        height: 80%;
+        min-width: 100px;
+        flex-direction: column;
+    }
+
+    .textAbout,
+    .scantextPopup {
+        font-size: 18px;
+    }
 }
 
 @media (min-width:550px) {
@@ -24,7 +38,22 @@
     }
 
     .text {
-        font-size: 20px;
+        font-size: 16px;
+    }
+
+    /* .scans {
+        transform: scale(0.7);
+    } */
+
+    .desScan {
+        height: 60%;
+        min-width: 600px;
+        flex-direction: column;
+    }
+
+    .textAbout,
+    .scantextPopup {
+        font-size: 18px;
     }
 }
 
@@ -35,7 +64,17 @@
     }
 
     .text {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    /* .scans {
+        transform: scale(1);
+    } */
+
+    .desScan {
+        height: 60%;
+        min-width: 600px;
+        flex-direction: row;
     }
 }
 
@@ -62,14 +101,14 @@ button {
 }
 
 .top_bar {
-    width: calc(100vw - 2%);
+    width: calc(100vw - 4%);
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    margin: 1% 1% 1%;
-    padding-bottom: 0.5%;
+    margin: 1.5% 2% 2%;
+    padding-bottom: 1%;
 
     border-bottom: 2px solid black;
     position: fixed;
@@ -78,13 +117,13 @@ button {
 }
 
 .ovals {
-    width: calc(100% - 27px);
+    width: calc(100vw - 1%);
     position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    margin: 16px 16px 30px;
+    margin: 1.1% 0.7% 0.5%;
     padding-bottom: 8px;
 
     z-index: 99;
@@ -116,6 +155,7 @@ button {
     position: fixed;
     background-color: #D9D9D9 0.9;
 
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
 
     position: fixed;
@@ -158,20 +198,16 @@ button {
 }
 
 .About {
-    max-width: 480px;
+    max-width: 420px;
 }
 
 .desScan {
     align-items: center;
     gap: 15px;
 
-    height: 60%;
-    min-width: 860px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
 }
 
 .textPopup {
@@ -181,11 +217,9 @@ button {
     min-width: 300px;
 }
 
-.scanPopup {}
-
 .textAbout,
 .scantextPopup {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .imgScanPopup {
