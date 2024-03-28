@@ -282,7 +282,7 @@ let scanData = {
     },
     nice2: {
         name: "Фотография",
-        date: "1 марта 2022/ Ницца",
+        date: "1 марта 2020/ Ницца",
         src: "img/ницца.png",
         sound: "On",
     },
