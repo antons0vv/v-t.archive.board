@@ -17,6 +17,16 @@
         margin-left: 0;
     }
 
+    .addStory {
+        flex-direction: row;
+        min-width: 500px;
+    }
+
+    .storyTextDiv {
+        height: 100%;
+        width: 70%;
+    }
+
 }
 
 @media (orientation: portrait) {
@@ -33,6 +43,21 @@
         align-self: start;
         margin-left: 10%;
     }
+
+    .addStory {
+        flex-direction: column;
+    }
+
+    .textStory {
+        align-self: flex-start;
+        margin-left: 3%;
+    }
+
+    .storyTextDiv {
+        height: 100%;
+        width: 85%;
+    }
+
 }
 
 @media (min-width:316px) {
@@ -77,6 +102,15 @@
     #oval_2 {
         transform: scale(0.7);
     }
+
+    .addStory {
+        width: 70%;
+    }
+
+    .nameCard,
+    .textCard {
+        font-size: 20px;
+    }
 }
 
 @media (min-width:550px) {
@@ -91,7 +125,7 @@
     }
 
     .text {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .desScan {
@@ -103,7 +137,7 @@
 
     .textAbout,
     .scantextPopup {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .top_bar {
@@ -120,6 +154,16 @@
     #oval_2 {
         transform: scale(0.9);
     }
+
+    .addStory {
+        width: 60%;
+    }
+
+    .nameCard,
+    .textCard {
+        font-size: 18px;
+    }
+
 }
 
 @media (min-width:1024px) {
@@ -201,6 +245,8 @@ button {
     z-index: 100;
 }
 
+/* Ovals style */
+
 .ovals {
     position: fixed;
     display: flex;
@@ -232,6 +278,7 @@ button {
     opacity: 0;
 }
 
+/* Main popup style */
 
 .popup {
     display: flex;
@@ -284,6 +331,8 @@ button {
     min-width: 250px;
 }
 
+/* Description scan style */
+
 .desScan {
     align-items: center;
     display: flex;
@@ -320,4 +369,76 @@ button {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+/* Add story style */
+
+.addStory {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    min-width: 30%;
+}
+
+.storyTextDiv {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.textStory {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    min-width: 30%;
+}
+
+input {
+    outline: none;
+    line-height: 1;
+    margin-bottom: 5px;
+    background: none;
+    border: none;
+}
+
+textarea {
+    outline: none;
+    line-height: 1;
+    margin-bottom: 5px;
+    background: none;
+    border: none;
+}
+
+.submStory {
+    color: grey;
+    text-align: left;
+    margin-top: 50px;
+    width: fit-content;
+    transition: all 20ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.enable {
+    color: black;
+}
+
+.enable:hover {
+    border-bottom: 1px solid black;
+}
+
+.story {
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: white;
+    padding: 15px;
+    max-width: 400px;
+}
+
+.textCard {
+    margin-top: 20px;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }

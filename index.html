@@ -96,7 +96,8 @@
         <p class="text textAbout">v-t.acrhive/board&nbsp;&mdash; это сайт-архив воспоминаний. На&nbsp;нём можно найти
             объекты
             из&nbsp;прошлого.
-            Они загружены разными людьми и&nbsp;дополнены историями.</p>
+            Они загружены разными людьми и&nbsp;дополнены историями. Также здесь каждый можеть оставить свои письменные
+            воспоминания.</p>
     </div>
     <div class="popup desScan popupOff">
         <button class="text close" type="button">×</button>
@@ -105,11 +106,19 @@
             <p class="text scanName scantextPopup">Name</p>
             <p class="text scanDate scantextPopup">Date</p>
             <p class="text scanDesc scantextPopup">Description</p>
-            <!-- <p class="text scanListen scantextPopup">> Послушать воспоминание</p> -->
         </div>
-
-        <div class="animation_container_2"></div>
-        <div class="animation_container_1"></div>
+    </div>
+    <div class="popup addStory popupOff">
+        <button class="text close" type="button">×</button>
+        <textarea type="text" name="storyBox" cols="30" rows="10" class="storyTextDiv text"></textarea>
+        <div class="textStory">
+            <input type="text" name="Name" placeholder="Название" class="text addName scantextPopup">
+            <input type="date" name="Date" class="text addDate scantextPopup">
+            <button class="text submStory" type="submit">Создать воспоминание</button>
+        </div>
+    </div>
+    <div class="animation_container_2"></div>
+    <div class="animation_container_1"></div>
 
 </body>
 

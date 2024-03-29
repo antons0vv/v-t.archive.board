@@ -14,9 +14,10 @@ $(document).ready(function () {
         $(".scanPopup").css("rotate", rAnglePopup + "deg");
     });
 
-    // About popup
-
     $(".scan").draggable({ stack: ".scan" });
+
+
+    // About popup
 
     $("#aboutBtn").click(function () {
         $(".About").removeClass("popupOff").addClass("popupOn");
@@ -24,6 +25,62 @@ $(document).ready(function () {
 
     $(".close").click(function () {
         $(".popup").removeClass("popupOn").addClass("popupOff");
+        $(".addName").val("");
+        $(".addDate").val("");
+        $(".storyTextDiv").val("");
+    });
+
+    // Plus popup
+
+    let divCount = 0;
+
+    $("#plusBtn").click(function () {
+        $(".addStory").removeClass("popupOff").addClass("popupOn");
+    });
+
+    function toggleSubmitButton() {
+        let storyText = $(".storyTextDiv").val();
+        let name = $(".addName").val();
+        let date = $(".addDate").val();
+        if (storyText.trim() !== "" && name.trim() !== "" && date.trim() !== "") {
+            $(".submStory").prop("disabled", false);
+            $(".submStory").addClass("enable");
+        } else {
+            $(".submStory").prop("disabled", true);
+            $(".submStory").removeClass("enable");
+        }
+    }
+
+    toggleSubmitButton();
+    $(".storyTextDiv, .addName, .addDate").on("input", toggleSubmitButton);
+
+    $(".submStory").click(function () {
+        let storyText = $(".storyTextDiv").val();
+        let name = $(".addName").val();
+        let date = $(".addDate").val();
+
+        if (storyText.trim() !== "" && name.trim() !== "" && date.trim() !== "") {
+            let newDiv = $("<div>").addClass("story").addClass("scan").attr("id", "div" + divCount++);
+            let namePara = $("<p>").addClass("text").addClass("nameCard").text(name + "/" + date);
+            let storyPara = $("<p>").addClass("text").addClass("textCard").text(storyText);
+
+            newDiv.append(namePara);
+            newDiv.append(storyPara);
+
+            newDiv.css({
+                "top": "150px", "left": "150px"
+            });
+
+            $(".scans").append(newDiv);
+
+            newDiv.draggable();
+
+            $(".storyTextDiv").val("");
+            $(".addName").val("");
+            $(".addDate").val("");
+
+            $(".popup").removeClass("popupOn").addClass("popupOff");
+        }
     });
 
 

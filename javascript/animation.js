@@ -71,9 +71,11 @@ function setup() {
 
     let circles = [];
     let numRows = 20;
-    let circlesPerRow = 32;
     let circleMargin = 30;
     let animationRunning2 = false;
+
+    let maxWidth = width - 2 * circleMargin;
+    let circlesPerRow = Math.floor(maxWidth / 30);
 
     class Circle {
         constructor(x, y) {
