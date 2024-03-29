@@ -45,7 +45,7 @@ let scanData = {
     sticker1: {
         name: "Наклейка",
         date: "12 декабря 2022/ Москва",
-        src: "img/найклейка-2.png",
+        src: "img/sticker2.png",
         description: "Из Скуратова",
         sound: "On",
     },
@@ -193,7 +193,7 @@ let scanData = {
     sticker2: {
         name: "Наклейка",
         date: "12 декабря 2022/ Москва",
-        src: "img/найклейка.png",
+        src: "img/sticker.png",
         description: "",
         sound: "On",
     },

@@ -19,7 +19,7 @@
 
     .addStory {
         flex-direction: row;
-        min-width: 500px;
+
     }
 
     .storyTextDiv {
